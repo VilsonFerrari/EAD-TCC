@@ -1,9 +1,42 @@
-body { background-color: #fff; color: #333; }
+body { background-color: #BEBEBE; color: #333; }
 
-body, p, ol, ul, td {
+body, p, ol, ul,th, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
+  padding:0% 10%;
+ 
+}
+th,td{
+ border-width:1px;
+ border-style:solid;
+ padding:0% 0%;
+}
+#opcao{
+ padding-left:0%,0%;
+ float:	right;
+ position:relative;
+ 
+}
+
+#menu{
+ background: -moz-linear-gradient(top, #00FF00, #00FF00);
+ background: -webkit-gradient(linear,
+                left top, left bottom, from(#00FF00), to(#00FF00));
+ border-style:solid;
+ border-width:1px;
+ border-color:white;
+}
+
+#corpo{
+ background: -moz-linear-gradient(top, #00FF00, #BEBEBE);
+ background: -webkit-gradient(linear,
+                left top, left bottom, from(#00FF00), to(#BEBEBE));
+ padding:3% 10%;
+ border-style:solid;
+ border-width:1px;
+ border-color:white;
+ border-bottom-width:0px;
 }
 
 pre {

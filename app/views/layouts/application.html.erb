@@ -7,15 +7,26 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<% if user_signed_in? %>
-<%= link_to 'Sair', destroy_user_session_path, :method => :delete %>
-<% end %> 
-
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
+<% if user_signed_in? %>
+<div id="menu">    
+	Ola sr(a).<%=current_user.name%>   | 	
+	 
+	<%= link_to 'Regras', roles_path %>
+	<a href ="../courses/">Cursos</a>
 
-
+	<% if current_user.id==3%>
+	<a href ="../users/index">Usuários</a>			
+	<% end %>
+	<div id="opcao">
+	<%= link_to 'Editar Perfil', edit_user_registration_path %>
+	<%= link_to 'Sair da Sessão', destroy_user_session_path, :method => :delete %>
+	</div>
+</div>
+<% end %> 
+<div id='corpo'>
 <%= yield %>
-
+</div>
 </body>
 </html>
